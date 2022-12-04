@@ -20,6 +20,32 @@ pipeline:
       npm ci --no-audit
       npm run build # Vite
       # npm run dev # Mix
+      
+  - name: Prepare
+    cmd: |
+      sudo apt update 
+      sudo apt install bc -y
+      sudo apt-get --only-upgrade install google-chrome-stable
+      npm install -g node-sass
+      mkdir -p storage
+      sudo ln -sf /alloc/chipper/repository/current/storage/logs storage/logs
+      sudo ln -sf /alloc/chipper/repository/current/workbench/bct/tests/tests tests
+      cd /alloc/chipper/repository/current
+      php artisan dusk:install
+      php artisan dusk:chrome-driver --detect
+      sudo ln -sf /alloc/chipper/repository/current/workbench/bct/tests/tests tests
+      sudo chmod -R 0755 vendor/laravel/dusk/bin/
+      sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
+      cd /alloc/chipper/repository/current
+      php artisan serve 2>/dev/null &
 
+  - name: Install cypress
+    cmd: | 
+      sudo apt-get -y install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+      npm install cypress --save-dev
+      composer require laracasts/cypress --dev
+      php artisan cypress:boilerplate
+   
   - name: Run Tests
-    cmd: phpunit
+    cmd: npm run cy:run --record --spec "tests/cypress/integration/example.cy.js"
+
