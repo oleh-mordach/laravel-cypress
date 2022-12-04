@@ -121,6 +121,7 @@ class ComposerStaticInit78f2b121ac68fb13d6bcc09b6d4cdaca
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'Laracasts\\Cypress\\' => 18,
         ),
         'I' => 
         array (
@@ -340,8 +341,8 @@ class ComposerStaticInit78f2b121ac68fb13d6bcc09b6d4cdaca
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -402,6 +403,10 @@ class ComposerStaticInit78f2b121ac68fb13d6bcc09b6d4cdaca
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Laracasts\\Cypress\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laracasts/cypress/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -2645,6 +2650,9 @@ class ComposerStaticInit78f2b121ac68fb13d6bcc09b6d4cdaca
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Laracasts\\Cypress\\Controllers\\CypressController' => __DIR__ . '/..' . '/laracasts/cypress/src/Controllers/CypressController.php',
+        'Laracasts\\Cypress\\CypressBoilerplateCommand' => __DIR__ . '/..' . '/laracasts/cypress/src/CypressBoilerplateCommand.php',
+        'Laracasts\\Cypress\\CypressServiceProvider' => __DIR__ . '/..' . '/laracasts/cypress/src/CypressServiceProvider.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
