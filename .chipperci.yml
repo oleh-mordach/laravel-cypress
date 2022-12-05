@@ -32,9 +32,9 @@ pipeline:
       php artisan dusk:chrome-driver --detect
       sudo chmod -R 0755 vendor/laravel/dusk/bin/
       sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
-      # sudo ln -sf tests/cypress/videos storage/logs
-      # sudo ln -sf tests/cypress/screenshots storage/logs
-      # sudo ln -sf tests/cypress/fixture storage/logs
+      sudo ln -sf tests/cypress/videos storage/logs
+      sudo ln -sf tests/cypress/screenshots storage/logs
+      sudo ln -sf tests/cypress/fixture storage/logs
 
   - name: Install cypress
     cmd: | 
@@ -47,5 +47,6 @@ pipeline:
     cmd: |
       php artisan serve 2>/dev/null &
       #sudo php -S 0.0.0.0:8000 2>/dev/null &
-      npm run cy:run -record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 --spec "tests/cypress/integration/example.cy.js"
+      npm run cy:run --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 --spec "tests/cypress/integration/example.cy.js"
+      #npx cypress run --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871
 
