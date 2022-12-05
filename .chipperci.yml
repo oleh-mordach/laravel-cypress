@@ -32,9 +32,6 @@ pipeline:
       php artisan dusk:chrome-driver --detect
       sudo chmod -R 0755 vendor/laravel/dusk/bin/
       sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
-      sudo ln -sf storage/logs tests/cypress/videos
-      sudo ln -sf storage/logs tests/cypress/screenshots 
-      sudo ln -sf storage/logs tests/cypress/fixture 
 
   - name: Install cypress
     cmd: | 
