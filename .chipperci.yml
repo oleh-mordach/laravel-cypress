@@ -27,6 +27,7 @@ pipeline:
       sudo apt install bc -y
       sudo apt-get --only-upgrade install google-chrome-stable
       npm install -g node-sass
+      composer require --dev laravel/dusk
       php artisan dusk:install
       php artisan dusk:chrome-driver --detect
       sudo chmod -R 0755 vendor/laravel/dusk/bin/
