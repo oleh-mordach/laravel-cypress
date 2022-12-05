@@ -43,6 +43,5 @@ pipeline:
   - name: Run Tests
     cmd: |
       php artisan serve 2>/dev/null &
+      npx cypress run --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 --env CYPRESS_BASE_URL=http://l27.0.0.1:8000 --browser chrome # record testing on cypress cloud
       #npm run cy:run --spec "tests/cypress/integration/example.cy.js" # run cypress tests
-      npx cypress run --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 # record testing on cypress cloud
-
