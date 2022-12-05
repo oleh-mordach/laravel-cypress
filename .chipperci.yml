@@ -42,6 +42,7 @@ pipeline:
    
   - name: Run Tests
     cmd: |
-      php artisan serve 2>/dev/null &
+      #php artisan serve 2>/dev/null &
+      sudo php -S 0.0.0.0:8000 2>/dev/null &
       npm run cy:run --record --spec "tests/cypress/integration/example.cy.js"
 
