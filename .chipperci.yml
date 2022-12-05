@@ -27,10 +27,10 @@ pipeline:
       sudo apt install bc -y
       sudo apt-get --only-upgrade install google-chrome-stable
       npm install -g node-sass
-      # php artisan dusk:install
-      # php artisan dusk:chrome-driver --detect
-      # sudo chmod -R 0755 vendor/laravel/dusk/bin/
-      # sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
+      php artisan dusk:install
+      php artisan dusk:chrome-driver --detect
+      sudo chmod -R 0755 vendor/laravel/dusk/bin/
+      sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
       php artisan serve 2>/dev/null &
 
   - name: Install cypress
