@@ -32,7 +32,6 @@ pipeline:
       php artisan dusk:chrome-driver --detect
       sudo chmod -R 0755 vendor/laravel/dusk/bin/
       sudo chmod -R 0755 vendor/laravel/dusk/bin/. 
-      php artisan serve 2>/dev/null &
 
   - name: Install cypress
     cmd: | 
@@ -42,5 +41,7 @@ pipeline:
       php artisan cypress:boilerplate
    
   - name: Run Tests
-    cmd: npm run cy:run --record --spec "tests/cypress/integration/example.cy.js"
+    cmd: |
+      php artisan serve 2>/dev/null &
+      npm run cy:run --record --spec "tests/cypress/integration/example.cy.js"
 
