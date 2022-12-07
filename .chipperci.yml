@@ -51,4 +51,4 @@ pipeline:
       else
           npm run cy:run  # run cypress tests
       fi
-      
+       
