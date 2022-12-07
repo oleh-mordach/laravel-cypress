@@ -47,7 +47,8 @@ pipeline:
       if [[ $CI_COMMIT_MESSAGE == 'record' ]]; then
           npx cypress run --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 --env CYPRESS_BASE_URL=http://l27.0.0.1:8000 --browser chrome # record testing on cypress cloud
       elif [[ $CI_COMMIT_MESSAGE == 'example' ]]; then
-          npx cypress run --spec "tests/cypress/integration/example.cy.js" --record --key b6c7add4-a312-469f-8dbc-93e3fc3e0871 --env CYPRESS_BASE_URL=http://l27.0.0.1:8000 --browser chrome # record testing on cypress cloud
+          npx cypress run --spec "tests/cypress/integration/example.cy.js" --env CYPRESS_BASE_URL=http://l27.0.0.1:8000 --browser chrome # record testing on cypress cloud
       else
           npm run cy:run  # run cypress tests
       fi
+      
